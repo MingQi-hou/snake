@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪吃蛇游戏</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.box {
+			width: 600px;
+			height: 600px;
+			margin: 0 auto;
+		}
+		.row {
+			overflow: hidden;
+		}
+		.grid {
+			float: left;
+			width: 30px;
+			height: 30px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src = js/Game.js></script>
+	<script type="text/javascript" src = js/map.js></script>
+	<script type="text/javascript" src = js/block.js></script>
+	<script type="text/javascript" src = js/food.js></script>
+	<script type="text/javascript" src = js/snake.js></script>
+	<script type="text/javascript">
+		// 创建实例化对象
+		var map = new Map(20,20,600,600);
+		var block = new Block("img/block.png");
+
+		var food = new Food(2,6,"img/food.jpg");
+
+		var snake_obj = {
+			head_obj:["img/1.png","img/2.png","img/3.png","img/4.png"],
+			body_obj: ["img/5.png"],
+			tail_obj :["img/6.png","img/7.png","img/8.png","img/9.png"]
+		}
+		var snake = new Snake(snake_obj);
+
+		var game = new Game(map,block,food,snake);
+
+		
+
+
+
+
+
+	</script>
+</body>
+</html>
